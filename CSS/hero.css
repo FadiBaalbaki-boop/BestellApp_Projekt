@@ -1,0 +1,57 @@
+.hero{
+    /* position: relative; */
+    width: 100%;
+
+    display: flex;
+    flex-direction: column; 
+    gap: 60px;
+}
+
+.hero-banner{
+    position: relative;
+}
+
+.hero-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.hero-logo{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-burger-logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 8px solid rgba(0, 0, 0, 0.25);
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-text{
+  font-family: 'Palanquin';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.hero-information-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+    .hero{
+         padding: 0px max(160px, calc(50% - 720px));
+     }
+    }
