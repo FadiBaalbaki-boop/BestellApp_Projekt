@@ -1,7 +1,5 @@
 .hero{
-    /* position: relative; */
     width: 100%;
-
     display: flex;
     flex-direction: column; 
     gap: 60px;
@@ -33,6 +31,10 @@
     bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.recision-pic{
+    border-radius: 10px;
 }
 
 .hero-text{

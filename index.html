@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestellAPP</title>
+    <link rel="stylesheet" href="./CSS/burger.css">
     <link rel="stylesheet" href="./CSS/fonts.css">
     <link rel="stylesheet" href="./CSS/hero.css">
     <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" href="./style.css">
+
+    <script defer src="./Javascript/menu_jason.js"></script>
+    <script defer src="./Javascript/template.js"></script>
+    <script defer  src="./script.js"></script>
 </head>
-<body>
+<body onload="init()">
     <header>
         <img src="./assets/img/header-logo.png" alt="logo">
         <img src="./assets/img/menu.png" alt="menü">
@@ -23,13 +28,22 @@
             <div class="hero-information-box">
                 <div class="hero-info">
                     <img src="./assets/img/BurgerHouse.png" alt="Überschrift Logo">
-                    <img src="./assets/img/recision-pic.png" alt="Rezission Bild">
+                    <img class="recision-pic" src="./assets/img/recision-pic.png" alt="Rezission Bild">
                 </div>
                     <p class="hero-text">The best of Burgers, Pizza, all in one great place.</p>
             </div>
+        </section>
+        <section class="burger-menu">
+            <div class="burger-headline">
+                <img class="burger-pic" src="./assets/icons/burger-pic.png" alt="Burger">
+                <p>Burger & Sandwiches</p>
+            </div>
+            <div class="menu-wrapper" id="burgerMenu"></div>
+
         </section>
     </main>
 
     
 </body>
 </html>
+
