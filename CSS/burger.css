@@ -30,30 +30,72 @@
 
 .menu-wrapper{
     margin-top: 30px;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
 }
 
 .menu-card{
+    padding: 12px;
     display: flex;
     gap: 50px;
     width: 100%;
-    
+    background-color: rgba(253, 234, 220, 1);
+    border-radius: 12px;
 }
 
 .burger-menu-pic{
     width: 205px;
     height: 120px;
     object-fit: cover;
+    border-radius: 12px;
 }
 
 .menu-card-info{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    flex: 1;
+    gap: 10px;  
+}
+
+.menu-name-price{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.menu-name-price h3, .menu-price{
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.menu-ingredients{
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.menu-button{
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 
