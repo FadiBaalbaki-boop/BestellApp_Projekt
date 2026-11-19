@@ -1,14 +1,17 @@
-main{
-    
 
-}
 
 .basket-wrapper{
     padding-right: 0;
     width: 435px;
     align-self: stretch;
+    flex: 0 0 435px;
 }
 
 .content{
     display: flex;
+}
+
+.menu-column{
+    flex: 0 0 calc(100% - 435px);
+    min-width: 0;
 }

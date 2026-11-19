@@ -3,28 +3,60 @@ const burgerList = [
         "img":          "./assets/img/burger-menu-1.png",  
         "name":         "Veggie mushroom black burger",
         "price":         16.90,
-        "ingredients":   ["Mixed green salad" ,"Tomatoes" ,"Edamame" ,"Mushroom"],
+        "ingredients":   [" Mixed green salad" ," Tomatoes" ," Edamame" ," Mushroom"],
         "amount":        0,
     },
     {
         "img":          "./assets/img/burger-menu-2.png",  
         "name":         "All meat Burger",
         "price":         15.90,
-        "ingredients":   ["Beef", "Bacon", "Dill pickles", "Smocked cheese", "Ketchup"],
+        "ingredients":   [" Beef", " Bacon", " Dill pickles", " Smocked cheese", " Ketchup"],
         "amount":        0,
     },
     {
         "img":          "./assets/img/burger-menu-3.png",  
         "name":         "Beef red Burger",
         "price":         14.90,
-        "ingredients":   ["Beef", "Cheese", "Tomatoes", "Lettuce", "Onion"],
+        "ingredients":   [" Beef", " Cheese", " Tomatoes", " Lettuce", " Onion"],
         "amount":        0,
     },
     {
         "img":          "./assets/img/burger-menu-4.png",  
         "name":         "Big Chicken Burger",
         "price":         14.90,
-        "ingredients":   ["Chicken", "Cheese", "Tomatoes", "Lettuce", "Onion", "Bell pepper"],
+        "ingredients":   [" Chicken", " Cheese", " Tomatoes", " Lettuce", " Onion", " Bell pepper"],
         "amount":        0,
     },
+]
+
+const pizzaList = [
+    {
+        "img":          "./assets/img/pizza-menu-1.png",  
+        "name":         "Pizza Margherita",
+        "price":         11.90,
+        "ingredients":   [" Tomato", " Sauce", " Mozarella"],
+        "amount":        0,
+    },
+    {
+        "img":          "./assets/img/pizza-menu-2.png",  
+        "name":         "Pizza Chorizo",
+        "price":         13.90,
+        "ingredients":   [" Tomato slices", " Mozarella", " Chorizo"],
+        "amount":        0,
+    },
+    {
+        "img":          "./assets/img/pizza-menu-3.png",  
+        "name":         "Funghi",
+        "price":         12.90,
+        "ingredients":   [" Red onion", " Olives", " Button Mushrooms", " Mozarella"],
+        "amount":        0,
+    },
+    {
+        "img":          "./assets/img/pizza-menu-4.png",  
+        "name":         "Quattro Formaggi with Chicken",
+        "price":         15.90,
+        "ingredients":   [" Chicken", " Mozarella", " Gorgonzola", " Fontina", " Parmigiano Regiano"],
+        "amount":        0,
+    },
+
 ]

@@ -1,15 +1,19 @@
-.burger-menu{
-    width: calc(100% - 435px);
-}
 
-.burger-pic{
-    margin-top: -35px;
+
+.menu-icon-burger-pic{
     width: 88px;
     height: 91px;
+    transform: translateY(-10px);
 }
 
-.burger-headline{
-    margin-top: 40px;
+.menu-icon-pizza-pic{
+    width: 88px;
+    height: 91px;
+    transform: translateY(0px);
+}
+
+.menu-headline{
+    margin-top: 80px;
     background-color: #E76C1F;
     height: 60px;  
     display: flex;
@@ -17,7 +21,7 @@
     gap: 30px;
 }
 
-.burger-headline p{
+.menu-headline p{
     display: flex;
     align-items: center;
     font-family: 'Palanquin';
@@ -106,11 +110,16 @@
 
 
 
+
+
 @media screen and (min-width: 1440px) {
     .burger-menu{
         padding: 0px max(160px, calc(50% - 720px));
     }
-    .burger-headline{
+    .menu-headline{
+        padding: 0px max(160px, calc(50% - 720px));
+    }
+    .pizza-wrapper{
         padding: 0px max(160px, calc(50% - 720px));
     }
     

@@ -1,16 +1,19 @@
 function init(){
-    renderBurgerList();
+    renderMenuList(burgerList, "burgerMenu");
+    renderMenuList(pizzaList, "pizzaMenu");
     renderBasket();
 }
 
 
-function renderBurgerList(){
-    let burgerMenuRef = document.getElementById('burgerMenu');
-    burgerMenuRef.innerHTML = "";
+function renderMenuList(menuList, id){
+    let menuListRef = document.getElementById(id);
+    menuListRef.innerHTML = "";
 
-    for (let i = 0; i < burgerList.length; i++) {
-        burgerMenuRef.innerHTML += getHTMLBurgerList(i);  
+    for (let i = 0; i < menuList.length; i++) {
+        menuListRef.innerHTML += getHTMLMenuList(menuList[i]);  
     }
+
+   
 }
 
 

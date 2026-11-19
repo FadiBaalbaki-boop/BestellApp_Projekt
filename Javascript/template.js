@@ -1,14 +1,14 @@
-function getHTMLBurgerList(i){
+function getHTMLMenuList(item){
     return `
         
     <article class="menu-card">
-        <img class="menu-pic" src="${burgerList[i].img}">
+        <img class="menu-pic" src="${item.img}">
         <div class="menu-card-info">
             <div class="menu-name-price">
-            <h3>${burgerList[i].name}</h3>
-            <p class="menu-price">${burgerList[i].price.toFixed(2)}€</p>
+            <h3>${item.name}</h3>
+            <p class="menu-price">${item.price.toFixed(2)}€</p>
             </div>
-            <p class="menu-ingredients">${burgerList[i].ingredients}</p>
+            <p class="menu-ingredients">${item.ingredients}</p>
             <div class="button">
             <button class="menu-button">Add to basket</button>
             </div>
