@@ -1,0 +1,46 @@
+.basket-sticky{
+    padding-top: 30px;
+    background-color: rgba(54, 53, 52, 1);
+    width: 100%;
+    height: 800px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+}
+
+h2{
+    color: rgba(253, 234, 220, 1);
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.text-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-info p{
+  font-family: 'Palanquin';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  color:rgba(253, 234, 220, 1);
+}
+
+.text-info img{
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+}

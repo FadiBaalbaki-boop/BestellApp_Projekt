@@ -10,7 +10,7 @@ const burgerList = [
         "img":          "./assets/img/burger-menu-2.png",  
         "name":         "All meat Burger",
         "price":         15.90,
-        "ingredients":   ["Beef", "Bacon", "Dill pickles", "Smocked cheese", "Ketchup", "BBQ souce"],
+        "ingredients":   ["Beef", "Bacon", "Dill pickles", "Smocked cheese", "Ketchup"],
         "amount":        0,
     },
     {

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestellAPP</title>
+    <link rel="stylesheet" href="./CSS/basket.css">
+    <link rel="stylesheet" href="./CSS/main.css">
     <link rel="stylesheet" href="./CSS/burger.css">
     <link rel="stylesheet" href="./CSS/fonts.css">
     <link rel="stylesheet" href="./CSS/hero.css">
@@ -33,15 +35,24 @@
                     <p class="hero-text">The best of Burgers, Pizza, all in one great place.</p>
             </div>
         </section>
-        <section class="burger-menu">
-            <div class="burger-headline">
+         <div class="burger-headline">
                 <img class="burger-pic" src="./assets/icons/burger-pic.png" alt="Burger">
                 <p>Burger & Sandwiches</p>
             </div>
+        <div class="content">
+        <section class="burger-menu">
             <div class="menu-wrapper" id="burgerMenu"></div>
-
         </section>
+        <section class="basket-wrapper">
+            <div class="basket-sticky">
+                <h2>Your Basket</h2>
+                <div id="basketContent" class="basket-content"></div>
+                <div id="basketSummary" class="basket-summary"></div>
+            </div>
+        </section>
+        </div>
     </main>
+
 
     
 </body>

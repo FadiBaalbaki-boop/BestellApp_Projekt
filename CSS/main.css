@@ -1,0 +1,14 @@
+main{
+    
+
+}
+
+.basket-wrapper{
+    padding-right: 0;
+    width: 435px;
+    align-self: stretch;
+}
+
+.content{
+    display: flex;
+}
