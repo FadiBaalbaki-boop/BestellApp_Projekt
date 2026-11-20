@@ -1,0 +1,27 @@
+footer{
+    background-color: #E76C1F;
+    height: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.footer-info{
+    display: flex;
+    gap: 72px;
+}
+
+footer p{
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+@media screen and (min-width: 1440px) {
+    footer{
+        padding: 0px max(160px, calc(50% - 720px));
+    }  
+}
