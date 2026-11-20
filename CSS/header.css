@@ -1,5 +1,4 @@
 header{
-    /* padding-inline: 160px; */
     width: 100%;
     height: 128px;
     background-color: #E76C1F;
@@ -12,6 +11,37 @@ header{
 @media screen and (min-width: 1440px) {
     header{
      padding: 0px max(160px, calc(50% - 720px));
+     }  
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px){
+    header{
+     padding: 0px max(120px, calc(50% - 720px));
+     }  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header{
+     padding: 0px max(80px, calc(50% - 720px));
+     }  
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    header{
+     padding: 0px max(40px, calc(50% - 720px));
+     } 
+     
+     .header-menu{
+        display: none;
      }
-    
+}
+
+@media screen and (max-width: 424px) {
+    header{
+     padding: 0px max(20px, calc(50% - 720px));
+     } 
+     
+     .header-menu{
+        display: none;
+     }
 }

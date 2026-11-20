@@ -10,6 +10,7 @@ function getHTMLMenuList(item){
             </div>
             <p class="menu-ingredients">${item.ingredients}</p>
             <div class="button">
+            <p class="menu-price-mobile">${item.price.toFixed(2)}€</p>
             <button class="menu-button">Add to basket</button>
             </div>
             </div>

@@ -22,11 +22,16 @@ h2{
 }
 
 .text-info{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.basket-content{
+    width: 100%;
 }
 
 .text-info p{
@@ -43,4 +48,13 @@ h2{
     width: 128px;
     height: 128px;
     object-fit: cover;
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    
+    .basket-wrapper{
+        flex: 0 0 320px;
+    }
+    
 }
