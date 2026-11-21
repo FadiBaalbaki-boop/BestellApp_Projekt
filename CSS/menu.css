@@ -21,7 +21,7 @@
     gap: 30px;
 }
 
-.desktop{
+.desktop, .desktop-pizza{
     display: flex;
     align-items: center;
     font-family: 'Palanquin';
@@ -32,7 +32,7 @@
     color: white;
 }
 
-.mobile{
+.mobile, .mobile-pizza{
     display: none;
     align-items: center;
     font-family: 'Palanquin';
@@ -150,6 +150,11 @@
         padding: 0px max(120px, calc(50% - 720px));
     }
 
+    .pizza-wrapper{
+        padding: 0px max(120px, calc(50% - 720px));
+
+    }
+
     .menu-card{
         flex-direction: column;
     }
@@ -175,11 +180,15 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .menu-headline{
-        padding: 0px max(80px, calc(50% - 720px));
+        padding: 0px max(20px, calc(50% - 720px));
     }
 
     .burger-menu{
-        padding: 0px max(80px, calc(50% - 720px));
+        padding: 0px max(20px, calc(50% - 720px));
+    }
+
+    .pizza-wrapper{
+        padding: 0px max(20px, calc(50% - 720px));
     }
 
     .menu-card{
@@ -225,16 +234,77 @@
     .mobile{
         display: flex;
         margin: 0;
+        font-size: 32px;
     }
 
     .menu-icon-burger-pic{
-        margin-top: -75px;
-        margin-bottom: -16px;
+        width: 55px;
+        height: 60px;
+        margin-top: -45px;
+        margin-bottom: -10px;
+    }
+
+    .menu-icon-pizza-pic{
+        width:55px;
+        height: 60px;
+        margin-top: -45px;
+        margin-bottom: -10px;
+    }
+
+    .desktop-pizza{
+        font-size: 32px;
+    }
+
+    .basket-wrapper{
+        display: none;
+    }
+
+    .basket-sticky{
+        display: none;
+    }
+
+    .burger-menu, .menu-column{
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .menu-wrapper{
+        align-items: center;
+    }
+
+    .burger-menu{
+        padding: 0px max(20px, calc(50% - 720px));
+    }
+
+    .pizza-wrapper{
+        padding: 0px max(20px, calc(50% - 720px));
+    }
+
+    .menu-card{
+        flex-direction: column;
+        max-width: 425px;
+    }
+
+    .menu-pic{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .menu-price{
+        display: none;
+    }
+
+    .menu-price-mobile{
+        display: flex;
+    }
+
+    .button{
+        justify-content: space-between;
     }
 }
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 424px) {
     .menu-headline{
         padding: 0px;
         flex-direction: column;
@@ -250,10 +320,76 @@
     .mobile{
         display: flex;
         margin: 0;
+        font-size: 32px;
     }
 
     .menu-icon-burger-pic{
-        margin-top: -75px;
-        margin-bottom: -16px;
+        width: 55px;
+        height: 60px;
+        margin-top: -45px;
+        margin-bottom: -10px;
+    }
+
+    .menu-icon-pizza-pic{
+        width:55px;
+        height: 60px;
+        margin-top: -45px;
+        margin-bottom: -10px;
+    }
+
+    .desktop-pizza{
+        font-size: 32px;
+    }
+
+    .basket-wrapper{
+        display: none;
+    }
+
+    .basket-sticky{
+        display: none;
+    }
+
+    .burger-menu, .menu-column{
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .menu-pic{
+        width: 100%;
+        height: 90px;
+        object-fit: cover;
+    }
+
+    .burger-menu{
+        padding: 0px max(10px, calc(50% - 720px));
+    }
+
+    .pizza-wrapper{
+        padding: 0px max(10px, calc(50% - 720px));
+    }
+
+    .menu-card{
+        flex-direction: column;
+        max-width: 425px;
+        min-height: 290px;
+        gap: 10px;
+    }
+
+    .menu-pic{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .menu-price{
+        display: none;
+    }
+
+    .menu-price-mobile{
+        display: flex;
+    }
+
+    .button{
+        justify-content: space-between;
+        margin-top: auto;
     }
 }
