@@ -17,27 +17,44 @@ function renderMenuList(menuList, id, category){
 
 function renderBasket(i){
     let basketContentRef = document.getElementById('basketContent');
-    let isEmpty = true;
     basketContentRef.innerHTML = "";
+    renderCategoryBasket(burgerList, "burger", basketContentRef);
+    renderCategoryBasket(pizzaList, "pizza", basketContentRef);
 
-    for (let i = 0; i < burgerList.length; i++) {
-        if(burgerList[i].amount > 0){
-            isEmpty = false;
-        }  
+    if(basketContentRef.innerHTML === ""){
+        basketContentRef.innerHTML = getHTMLEpmtyBasket();
     }
-    if(isEmpty){
-        basketContentRef.innerHTML += getHTMLEpmtyBasket(i);
-    }  
 }
+
+
+function renderCategoryBasket(menuList, category, itembox){
+    for (let i = 0; i < menuList.length; i++) {
+        if(menuList[i].amount > 0){
+            itembox.innerHTML += getHTMLBasketItem(menuList[i], category, i);
+}
+    }
+}
+
+
 
 function addToBasket(category, i){
     let list;
-    if(category === "burgerList"){
-        list = "burgerList"
+    if(category === "burger"){
+        list = burgerList
     }else{
-        list = "pizzaList"
+        list = pizzaList
     }
-
     list[i].amount++;
+    renderBasket();
+}
+
+function deleteAmount(category, i){
+    let list;
+    if(category === "burger"){
+        list = burgerList
+    }else{
+        list = pizzaList
+    }
+    list[i].amount--;
     renderBasket();
 }

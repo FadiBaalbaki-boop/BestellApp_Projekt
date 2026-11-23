@@ -26,3 +26,23 @@ function getHTMLEpmtyBasket(i){
     delicous</p>
     <img src="./assets/img/basket.png">`
 }
+
+function getHTMLBasketItem(item, category, i){
+    let totalItemPrice = (item.price * item.amount).toFixed(2);
+    let minusOrTrash = item.amount === 1 ? '<img src="./assets/icons/delete.png">' : '-';
+
+    return `
+    <div class="basket-item">
+    <div class="basket-item-header">
+    <span>${item.amount} * ${item.name}</span>
+    </div>
+    <div class="basket-item-controls">
+    <div class="quantity-box">
+    <button class="trash-btn" onclick="deleteAmount('${category}', ${i})">${minusOrTrash}</button>
+    <span>${item.amount}</span>
+    <button class="trash-btn" onclick="addToBasket('${category}', ${i})">+</button
+    </div>
+    <span>${totalItemPrice}€</span>
+    </div>
+    </div>`
+}
