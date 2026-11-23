@@ -17,12 +17,19 @@ function renderMenuList(menuList, id, category){
 
 function renderBasket(i){
     let basketContentRef = document.getElementById('basketContent');
+    let basketSummaryRef = document.getElementById('basketSummary');
     basketContentRef.innerHTML = "";
     renderCategoryBasket(burgerList, "burger", basketContentRef);
     renderCategoryBasket(pizzaList, "pizza", basketContentRef);
 
     if(basketContentRef.innerHTML === ""){
         basketContentRef.innerHTML = getHTMLEpmtyBasket();
+        basketSummaryRef.innerHTML = "";
+    }else{
+        let subTotal = calculateSubTotal();
+        let deliveryFree = 4.99;
+        let total = subTotal + deliveryFree;
+        basketSummaryRef.innerHTML = getHTMLBasketSummary(subTotal, deliveryFree, total);
     }
 }
 
@@ -36,7 +43,6 @@ function renderCategoryBasket(menuList, category, itembox){
 }
 
 
-
 function addToBasket(category, i){
     let list;
     if(category === "burger"){
@@ -48,6 +54,7 @@ function addToBasket(category, i){
     renderBasket();
 }
 
+
 function deleteAmount(category, i){
     let list;
     if(category === "burger"){
@@ -57,4 +64,15 @@ function deleteAmount(category, i){
     }
     list[i].amount--;
     renderBasket();
+}
+
+
+function calculateSubTotal(){
+    let menuList = burgerList.concat(pizzaList);
+    let sum = 0;
+
+    for (let i = 0; i < menuList.length; i++) {
+        sum += menuList[i].price * menuList[i].amount;  
+    }
+    return sum;
 }

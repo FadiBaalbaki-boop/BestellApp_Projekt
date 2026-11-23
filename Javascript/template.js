@@ -46,3 +46,23 @@ function getHTMLBasketItem(item, category, i){
     </div>
     </div>`
 }
+
+function getHTMLBasketSummary(subTotal, deliveryFree, total){
+    return`
+    <div class="basket-summary-line">
+    <span>Subtotal</span>
+    <span>${subTotal.toFixed(2)}€</span>
+    </div>
+    <div class="basket-summary-line">
+    <span>Delivery free</span>
+    <span>${deliveryFree.toFixed(2)}€</span>
+    </div>
+    <hr class="basket-line">
+    <div class="basket-summary-line basket-total">
+    <span>Total</span>
+    <span>${total.toFixed(2)}€</span>
+    </div>
+    <button onclick="orderNow()" class="order-now-btn">
+    Buy now (${total.toFixed(2)}€)
+    </button>`;
+}
