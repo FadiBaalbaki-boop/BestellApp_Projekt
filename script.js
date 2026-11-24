@@ -76,3 +76,22 @@ function calculateSubTotal(){
     }
     return sum;
 }
+
+
+function orderNow(){
+    let orderOverlayRef = document.getElementById('orderOverlay');
+    orderOverlayRef.innerHTML = getHTMLorderOverlay();
+    orderOverlayRef.showModal();
+    let menuList = burgerList.concat(pizzaList);
+    for (let i = 0; i < menuList.length; i++) {
+        menuList[i].amount = 0;
+        
+    }
+    renderBasket();
+}
+
+
+function closeOverlay(){
+    let orderOverlayRef = document.getElementById('orderOverlay');
+    orderOverlayRef.close();
+}

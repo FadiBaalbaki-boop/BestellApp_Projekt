@@ -126,6 +126,72 @@
     margin-bottom: 80px;
 }
 
+#orderOverlay{
+    background-color: rgba(54, 53, 52, 1);
+    position: fixed;
+    top: 180px;
+    left: 150px;
+    margin: 0;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 32px 40px;
+    width: 90%;
+    height: fit-content;
+    max-width: 320px;
+    text-align: center;
+}
+
+.close{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.close img{
+    width: 18px;
+    height: 18px;
+}
+
+.overlay-status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.overlay-status img{
+    width: 72px;
+    height: auto;
+}
+
+.overlay-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay-text h3{
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.0;
+    color: rgba(253, 234, 220, 1);
+}
+
+.overlay-text p{
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(253, 234, 220, 1);
+}
+
 
 
 @media screen and (min-width: 1440px) {

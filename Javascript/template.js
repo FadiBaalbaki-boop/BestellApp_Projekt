@@ -18,6 +18,7 @@ function getHTMLMenuList(item, category, i){
     </article>`
 }
 
+
 function getHTMLEpmtyBasket(i){
     return `
     <div class="text-info">
@@ -26,6 +27,7 @@ function getHTMLEpmtyBasket(i){
     delicous</p>
     <img src="./assets/img/basket.png">`
 }
+
 
 function getHTMLBasketItem(item, category, i){
     let totalItemPrice = (item.price * item.amount).toFixed(2);
@@ -47,6 +49,7 @@ function getHTMLBasketItem(item, category, i){
     </div>`
 }
 
+
 function getHTMLBasketSummary(subTotal, deliveryFree, total){
     return`
     <div class="basket-summary-line">
@@ -65,4 +68,19 @@ function getHTMLBasketSummary(subTotal, deliveryFree, total){
     <button onclick="orderNow()" class="order-now-btn">
     Buy now (${total.toFixed(2)}€)
     </button>`;
+}
+
+
+function getHTMLorderOverlay(){
+    return`
+    <button class="close" onclick="closeOverlay()">
+    <img src="./assets/icons/closeoverlay.png">
+    </button
+    <div class="overlay-status">
+    <img src="./assets/icons/deliverycar.png">
+    <div class="overlay-text">
+    <h3>Order Confirmed</h3>
+    <p>Your food is on the way!</p>
+    </div>
+    </div>`
 }
