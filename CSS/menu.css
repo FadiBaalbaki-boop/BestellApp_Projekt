@@ -264,7 +264,8 @@
         padding: 0px max(20px, calc(50% - 720px));
     }
     .pizza-menu .menu-headline{
-        width: calc(100% + 435px);
+        width: 100%;
+        max-width: 100%;
         padding: 0px max(120px, calc(50% - 720px));
     }
     .menu-card{
