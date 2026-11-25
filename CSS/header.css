@@ -30,7 +30,6 @@ header{
     header{
      padding: 0px max(40px, calc(50% - 720px));
      } 
-     
      .header-menu{
         display: none;
      }
@@ -40,7 +39,6 @@ header{
     header{
      padding: 0px max(20px, calc(50% - 720px));
      } 
-     
      .header-menu{
         display: none;
      }

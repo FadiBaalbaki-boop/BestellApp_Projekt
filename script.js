@@ -8,20 +8,18 @@ function init(){
 function renderMenuList(menuList, id, category){
     let menuListRef = document.getElementById(id);
     menuListRef.innerHTML = "";
-
     for (let i = 0; i < menuList.length; i++) {
         menuListRef.innerHTML += getHTMLMenuList(menuList[i], category, i);  
     }  
 }
 
 
-function renderBasket(i){
+function renderBasket(){
     let basketContentRef = document.getElementById('basketContent');
     let basketSummaryRef = document.getElementById('basketSummary');
     basketContentRef.innerHTML = "";
     renderCategoryBasket(burgerList, "burger", basketContentRef);
     renderCategoryBasket(pizzaList, "pizza", basketContentRef);
-
     if(basketContentRef.innerHTML === ""){
         basketContentRef.innerHTML = getHTMLEpmtyBasket();
         basketSummaryRef.innerHTML = "";
@@ -79,13 +77,14 @@ function calculateSubTotal(){
 
 
 function orderNow(){
+    let basketWrapperRef = document.getElementById('basketWrapper');
     let orderOverlayRef = document.getElementById('orderOverlay');
     orderOverlayRef.innerHTML = getHTMLorderOverlay();
-    orderOverlayRef.showModal();
+    orderOverlayRef.show();
+    basketWrapperRef.classList.remove('mobile-basket-open');
     let menuList = burgerList.concat(pizzaList);
     for (let i = 0; i < menuList.length; i++) {
-        menuList[i].amount = 0;
-        
+        menuList[i].amount = 0;   
     }
     renderBasket();
 }
@@ -93,5 +92,19 @@ function orderNow(){
 
 function closeOverlay(){
     let orderOverlayRef = document.getElementById('orderOverlay');
-    orderOverlayRef.close();
+    orderOverlayRef.close(); 
 }
+
+
+function mobileBasket(){
+    let orderOverlayRef = document.getElementById('orderOverlay');
+    let basketWrapperRef = document.getElementById('basketWrapper');
+    
+    if(orderOverlayRef.open){
+        closeOverlay();
+    }else{
+        basketWrapperRef.classList.toggle('mobile-basket-open');
+    }
+}
+
+

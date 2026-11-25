@@ -75,20 +75,16 @@
          padding: 10px max(10px, calc(50% - 720px));
          gap: 80px;
      }
-
      .hero-info{
         flex-direction: column-reverse;
      }
-
      .hero-information-box{
         padding: 0px max(30px, calc(50% - 720px));
      }
-
      .hero-text{
         font-size: 20px;
         text-align: center;
      }
-
      .hero-burger-logo{
         width: 150px;
         height: 150px;
@@ -100,25 +96,20 @@
          padding: 20px max(10px, calc(50% - 720px));
          gap: 80px;
      }
-
      .hero-info{
         flex-direction: column-reverse;
      }
-
      .hero-information-box{
         padding: 0px max(30px, calc(50% - 720px));
      }
-
      .hero-text{
         font-size: 20px;
         text-align: center;
      } 
-
      .hero-burger-logo{
         width: 100px;
         height: 100px;
      }
-
      .burger-circle{
         width: 250px;
         height: 40px;

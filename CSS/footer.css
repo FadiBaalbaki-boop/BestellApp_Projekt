@@ -31,6 +31,17 @@ nav{
     gap: 44px;
 }
 
+.mobile-basket-btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.mobile-basket-btn:hover{
+    transform: scale(1.15);
+}
+
 
 @media screen and (min-width: 1440px) {
     footer{
@@ -55,7 +66,6 @@ nav{
         padding: 20px max(20px, calc(50% - 720px));
         height: auto;
     }  
-    
     .footer-info{
         width: 100%;
         flex-direction: column;
@@ -63,12 +73,10 @@ nav{
         justify-content: center;
         gap: 20px;
     }
-
     nav{
         display: flex;
         width: 100%;
     }
-
     .navbar{
         width: 100%;
         justify-content: space-between;
@@ -80,7 +88,6 @@ nav{
         padding: 20px max(20px, calc(50% - 720px));
         height: auto;
     }  
-    
     .footer-info{
         width: 100%;
         flex-direction: column;
@@ -88,12 +95,10 @@ nav{
         justify-content: center;
         gap: 20px;
     }
-
     nav{
         display: flex;
         width: 100%;
     }
-
     .navbar{
         width: 100%;
         justify-content: space-between;

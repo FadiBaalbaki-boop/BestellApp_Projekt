@@ -1,5 +1,3 @@
-
-
 .menu-icon-burger-pic{
     width: 88px;
     height: 91px;
@@ -48,8 +46,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    
+    gap: 20px; 
 }
 
 .menu-card{
@@ -165,7 +162,7 @@
     gap: 16px;
 }
 
-.overlay-status img{
+.delivery-car{
     width: 72px;
     height: auto;
 }
@@ -211,33 +208,26 @@
     .menu-headline{
         padding: 0px max(120px, calc(50% - 720px));
     }
-
     .burger-menu{
         padding: 0px max(120px, calc(50% - 720px));
     }
-
     .pizza-wrapper{
         padding: 0px max(120px, calc(50% - 720px));
 
     }
-
     .menu-card{
         flex-direction: column;
     }
-
     .menu-pic{
         width: 100%;
         object-fit: cover;
     }
-
     .menu-price{
         display: none;
     }
-
     .menu-price-mobile{
         display: flex;
     }
-
     .button{
         justify-content: space-between;
     }
@@ -248,39 +238,63 @@
     .menu-headline{
         padding: 0px max(20px, calc(50% - 720px));
     }
-
     .burger-menu{
         padding: 0px max(20px, calc(50% - 720px));
     }
-
     .pizza-wrapper{
         padding: 0px max(20px, calc(50% - 720px));
     }
-
     .menu-card{
         flex-direction: column;
     }
-
     .menu-pic{
         width: 100%;
         object-fit: cover;
     }
-
     .menu-price{
         display: none;
     }
-
     .menu-price-mobile{
         display: flex;
     }
-
     .button{
         justify-content: space-between;
     }
-
     .menu-column{
     flex: 0 0 calc(100% - 320px);
 }
+}
+
+@media screen and (max-width: 767px) {
+    #orderOverlay{
+        inset: auto;
+        position: fixed;
+        top: auto;
+        bottom: 65px;
+        left: 50%;
+        margin: 0;
+        width: 90%;
+        max-width: 320px;
+        z-index: 150;
+        transform: translate(-50%, 120%);
+        opacity: 0;
+        transition: 
+        transform 0.35s ease-out,
+        opacity 0.25s ease,
+        display 0.35s allow-discrete,
+        overlay 0.35s allow-discrete;
+    }
+    #orderOverlay[open]{
+        display: block;
+        transform: translate(-50%, -150%);
+        opacity: 1;
+    }
+    @starting-style{
+        #orderOverlay[open]{
+            transform: translate(-50%, 120%);
+            opacity: 0;
+        }
+    } 
 }
 
 
@@ -292,78 +306,79 @@
         align-items: center;
         gap: 0;
     }
-
     .desktop{
         display: none;
     }
-
     .mobile{
         display: flex;
         margin: 0;
         font-size: 32px;
     }
-
     .menu-icon-burger-pic{
         width: 55px;
         height: 60px;
         margin-top: -45px;
         margin-bottom: -10px;
     }
-
     .menu-icon-pizza-pic{
         width:55px;
         height: 60px;
         margin-top: -45px;
         margin-bottom: -10px;
     }
-
     .desktop-pizza{
         font-size: 32px;
     }
-
     .basket-wrapper{
-        display: none;
+        display: flex;
+        position: fixed;
+        bottom: 65px;
+        left: 50%;
+        width: 90%;
+        max-width: 400px;
+        z-index: 100;
+        transform: translate(-50%, 120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.35s ease-out, opacity 0.25s ease;
     }
+    .basket-wrapper.mobile-basket-open{
+        transform: translate(-50%, 0);
+        opacity: 1;
+        pointer-events: auto;
 
-    .basket-sticky{
-        display: none;
     }
-
+    .basket-wrapper.mobile-basket-open .basket-sticky{
+        width: 100%;
+        border-radius: 20px;
+    }
     .burger-menu, .menu-column{
         flex: 0 0 100%;
         width: 100%;
     }
-
     .menu-wrapper{
         align-items: center;
     }
-
     .burger-menu{
         padding: 0px max(20px, calc(50% - 720px));
     }
-
     .pizza-wrapper{
         padding: 0px max(20px, calc(50% - 720px));
     }
-
     .menu-card{
         flex-direction: column;
         max-width: 425px;
     }
-
     .menu-pic{
         width: 100%;
         object-fit: cover;
     }
-
     .menu-price{
         display: none;
     }
-
     .menu-price-mobile{
         display: flex;
     }
-
     .button{
         justify-content: space-between;
     }
@@ -378,84 +393,110 @@
         align-items: center;
         gap: 0;
     }
-
     .desktop{
         display: none;
     }
-
     .mobile{
         display: flex;
         margin: 0;
         font-size: 32px;
     }
-
     .menu-icon-burger-pic{
         width: 55px;
         height: 60px;
         margin-top: -45px;
         margin-bottom: -10px;
     }
-
     .menu-icon-pizza-pic{
         width:55px;
         height: 60px;
         margin-top: -45px;
         margin-bottom: -10px;
     }
-
     .desktop-pizza{
         font-size: 32px;
     }
-
     .basket-wrapper{
-        display: none;
+        display: flex;
+        position: fixed;
+        bottom: 65px;
+        left: 50%;
+        width: 90%;
+        max-width: 320px;
+        z-index: 100;
+        transform: translate(-50%, 120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.35s ease-out, opacity 0.25s ease;
     }
+    .basket-wrapper.mobile-basket-open{
+        transform: translate(-50%, 0);
+        opacity: 1;
+        pointer-events: auto;
 
-    .basket-sticky{
-        display: none;
     }
-
+    .basket-wrapper.mobile-basket-open .basket-sticky{
+        width: 100%;
+        border-radius: 20px;
+    }
     .burger-menu, .menu-column{
         flex: 0 0 100%;
         width: 100%;
     }
-
     .menu-pic{
         width: 100%;
         height: 90px;
         object-fit: cover;
     }
-
     .burger-menu{
         padding: 0px max(10px, calc(50% - 720px));
     }
-
     .pizza-wrapper{
         padding: 0px max(10px, calc(50% - 720px));
     }
-
     .menu-card{
         flex-direction: column;
         max-width: 425px;
         min-height: 290px;
         gap: 10px;
     }
-
     .menu-pic{
         width: 100%;
         object-fit: cover;
     }
-
     .menu-price{
         display: none;
     }
-
     .menu-price-mobile{
         display: flex;
     }
-
     .button{
         justify-content: space-between;
         margin-top: auto;
+    }
+    .navbar img{
+        width: 24px;
+        height: 24px;
+    }
+    .overlay-text h3{
+        font-size: 20px;
+    }
+    .overlay-text p{
+        font-size: 16px;
+        line-height: 1.0;
+    }
+    .overlay-text{
+        gap: 10px;
+    }
+    .delivery-car{
+        width: 40px;
+        height: auto;
+    }
+    #dialog{
+        gap: 16px;
+    }
+    .close img{
+        width: 16px;
+        height: 16px;
     }
 }
