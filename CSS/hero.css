@@ -17,14 +17,14 @@
 }
 .hero-logo{
     width: 100%;
-    height: 100%;
+    height: 350px;
     object-fit: cover;
     display: block;
 }
 
 .hero-burger-logo{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 8px solid rgba(0, 0, 0, 0.25);
     position: absolute;

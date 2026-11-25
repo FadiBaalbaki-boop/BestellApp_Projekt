@@ -126,17 +126,22 @@
 #orderOverlay{
     background-color: rgba(54, 53, 52, 1);
     position: fixed;
-    top: 180px;
-    left: 150px;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
     margin: 0;
+    transform: translate(-50%, -50%);
     color: white;
     border: none;
     border-radius: 20px;
     padding: 32px 40px;
-    width: 90%;
+    width: min(90vw, 320px);
     height: fit-content;
     max-width: 320px;
     text-align: center;
+    overflow-y: auto;
+    z-index: 1000;
 }
 
 .close{
@@ -193,14 +198,25 @@
 
 @media screen and (min-width: 1440px) {
     .burger-menu{
-        padding: 0px max(160px, calc(50% - 720px));
+        padding: 0px max(160px, calc(50vw - 720px));
+    }
+    .pizza-menu .menu-headline {
+        width: calc(100% + 435px);
+        padding: 0px max(160px, calc(50vw - 720px));
     }
     .menu-headline{
-        padding: 0px max(160px, calc(50% - 720px));
+        padding-inline: max(160px, calc(50% - 720px));
+    }
+    .menu-headline .menu-icon-burger-pic{
+        left: max(160px, calc(50% - 720px));
     }
     .pizza-wrapper{
-        padding: 0px max(160px, calc(50% - 720px));
-    }    
+        padding: 0px max(160px, calc(50vw - 720px));
+    }   
+    
+    .menu-icon-burger-pic .menu-icon-pizza-pic{
+        left: max(160px, calc(50vw - 720px));
+    }
 }
 
 
@@ -213,7 +229,10 @@
     }
     .pizza-wrapper{
         padding: 0px max(120px, calc(50% - 720px));
-
+    }
+    .pizza-menu .menu-headline{
+        width: calc(100% + 435px);
+        padding: 0px max(120px, calc(50% - 720px));
     }
     .menu-card{
         flex-direction: column;
@@ -243,6 +262,10 @@
     }
     .pizza-wrapper{
         padding: 0px max(20px, calc(50% - 720px));
+    }
+    .pizza-menu .menu-headline{
+        width: calc(100% + 435px);
+        padding: 0px max(120px, calc(50% - 720px));
     }
     .menu-card{
         flex-direction: column;
@@ -351,6 +374,9 @@
     .basket-wrapper.mobile-basket-open .basket-sticky{
         width: 100%;
         border-radius: 20px;
+    }
+    .mobile-close-btn{
+        display: flex;
     }
     .burger-menu, .menu-column{
         flex: 0 0 100%;

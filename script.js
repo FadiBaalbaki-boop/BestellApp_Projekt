@@ -108,3 +108,8 @@ function mobileBasket(){
 }
 
 
+function mobileClose(){
+    document.getElementById('basketWrapper').classList.remove('mobile-basket-open');
+}
+
+

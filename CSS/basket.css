@@ -1,9 +1,9 @@
 .basket-sticky{
-    padding-top: 30px;
-    padding-inline: 24px;
+    padding: 30px 20px;
     background-color: rgba(54, 53, 52, 1);
     width: 100%;
-    height: 850px;
+    height: fit-content;
+    min-height: 450px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     display: flex;
@@ -28,7 +28,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .text-info p{
@@ -42,8 +42,8 @@ h2{
 }
 
 .text-info img{
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
 }
 
@@ -70,6 +70,11 @@ h2{
     border-radius: 4px;
 }
 
+.basket-content:not(:has(.basket-item)){
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
 .basket-item{
     background-color: rgba(253, 234, 220, 1);
     color: rgba(54, 53, 52, 1);
@@ -83,15 +88,38 @@ h2{
 
 .basket-item-header{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    gap: 10px;
+    gap: 3px;
     font-family: 'Palanquin';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.3;
+}
+
+.basket-quantity, .basket-item-header{
+    flex: 0 0 2ch;
+    white-space: nowrap;
+    /* font-variant-numeric: tabular-nums; */
+}
+
+.basket-name{
+    flex: 1;
+    min-width: 0;
+}
+
+.basket-multiply, .basket-item-header{
+    flex: 0 0 1ch;
+    text-align: center;
+}
+
+.basket-item-header, .basket-name{
+    flex: 1;
+    min-width: 0;
+    margin-left: 0;
+    text-align: left;
 }
 
 .basket-item-controls{
@@ -109,6 +137,28 @@ h2{
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
+}
+
+.quantity-box > span{
+    flex: 0 0 20px;
+    width: 20px;
+    text-align: center;
+}
+
+.quantity-box .trash-btn{
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-box .trash-btn img{
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
 }
 
 .quantity-box button, .trash-btn{
@@ -187,7 +237,26 @@ h2{
     background-color: #d15d15;
 }
 
+.mobile-close-btn{
+    width: 100%;
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    background: transparent;
+    border: none
+}
 
+/* @media screen and (min-width: 1440px) {
+    .basket-wrapper{
+        width: 595px;
+        flex: 0 0 595px;
+        padding-right: 160px;
+    }
+
+    .menu-column{
+        flex: 0 0 calc(100% - 595px);
+    }
+} */
 @media screen and (min-width: 767px) and (max-width: 1023px) {
     
     .basket-wrapper{

@@ -19,7 +19,7 @@ function getHTMLMenuList(item, category, i){
 }
 
 
-function getHTMLEpmtyBasket(i){
+function getHTMLEpmtyBasket(){
     return `
     <div class="text-info">
         <p>Nothing here yet.<br>
@@ -37,12 +37,14 @@ function getHTMLBasketItem(item, category, i){
     return `
     <div class="basket-item">
     <div class="basket-item-header">
-        <span>${item.amount} * ${item.name}</span>
+        <span class="basket-quantity">${item.amount}</span> 
+        <span class="basket-multiply">x</span> 
+        <span class="basket-name">${item.name}</span>
     </div>
     <div class="basket-item-controls">
     <div class="quantity-box">
         <button class="trash-btn" onclick="deleteAmount('${category}', ${i})">${minusOrTrash}</button>
-        <span>${item.amount}</span>
+        <span>${item.amount} </span>
         <button class="trash-btn" onclick="addToBasket('${category}', ${i})">+</button
     </div>
         <span>${totalItemPrice}€</span>
